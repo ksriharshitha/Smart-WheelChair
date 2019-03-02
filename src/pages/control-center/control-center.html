@@ -1,0 +1,71 @@
+<!--
+  Generated template for the ControlCenterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Control Center</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+
+<ion-content padding style="background-color: cornflowerblue;">
+    
+  <button ion-button style="background-color: black" (click)="BluetoothEnable(bluetoothstate)" full>{{bluetoothstate}}&nbsp;&nbsp;&nbsp;<ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner></button>  
+  <br>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-auto>
+        <button ion-button style="background-color: black" (click)="BluetoothAction('1')">Manual</button>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button style="background-color: black" (click)="BluetoothAction('2')">Motion</button>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button style="background-color: black" (click)="BluetoothAction('3')">Auto</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list-header style="background-color:black;color: white;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Joystick Controls</ion-list-header>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <button ion-button style="background-color: black" (click)="BluetoothAction('w')"><ion-icon name='ios-arrow-up'></ion-icon></button>
+    </ion-row>
+    <ion-row justify-content-center>
+      <button ion-button style="background-color: black" (click)="BluetoothAction('a')"><ion-icon name='ios-arrow-back'></ion-icon></button>&nbsp;
+      <button ion-button (click)="BluetoothAction('z')" style="background-color: black"><ion-icon [name]='iconname'></ion-icon></button>&nbsp;
+      <button ion-button style="background-color: black" (click)="BluetoothAction('d')"><ion-icon name='ios-arrow-forward'></ion-icon></button>
+    </ion-row>
+    <ion-row justify-content-center>
+        <button ion-button style="background-color: black" (click)="BluetoothAction('s')"><ion-icon name='ios-arrow-down'></ion-icon></button>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <ion-list-header style="color: white;background-color: black;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Voice Controls</ion-list-header>
+  <ion-grid>
+    <ion-row justify-content-center><b><span style="font-size:150%">Start</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><span style="font-size:150%">Stop</span></b></ion-row>
+    <br><ion-row justify-content-center><b>Forward</b></ion-row>
+    <br><ion-row justify-content-center>
+      <br><b><br>Left</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button ion-fab style="background-color: black" (click)="startListening()"><ion-icon [name]="speakstate"></ion-icon></button>  
+      <button ion-fab style="background-color: black" *ngIf="isIos()" (click)="stopListening()" full><ion-icon name="close"></ion-icon></button>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><br>Right</b><br>
+    </ion-row><br>
+    <ion-row justify-content-center><b>Backward</b></ion-row>
+  </ion-grid>
+<!--   <ion-card>
+    <ion-card-header>This is what I understood...</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let match of matches">
+          {{ match }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>

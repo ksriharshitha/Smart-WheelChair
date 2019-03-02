@@ -1,0 +1,39 @@
+page-show-devices{
+
+    .item-md.item-block .item-inner{
+
+        border-bottom: 0px;
+    }
+    .item-md{
+
+        padding-left:0px;
+        .item-inner{
+            padding-right: 0px;
+        }
+        .item-md{
+
+            padding-left: 0px;
+        }
+        .col{
+
+            padding-top: 0px;
+            padding-left: 2px;
+        }
+    }
+    .label-md{
+
+        margin: 0px 0px 0px;
+    }
+}
+ion-modal.page-show-devices ion-backdrop{
+    visibility: visible !important;
+    z-index: 10;
+}
+ion-modal.page-show-devices .modal-wrapper{
+    overflow: hidden;
+    top:10%;
+    width: 80%;
+    left: 10%;
+    height: 80%;
+    position: absolute;
+}

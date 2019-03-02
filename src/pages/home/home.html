@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+<ion-content padding class="main-background">
+  <div id="map_canvas"></div>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <button ion-button style="background-color: black" (click)="onButtonClick($event)">My Location</button>
+      <button ion-button style="background-color: black" (click)="sendHelpSms()">Help</button>
+    </ion-row><br>
+    <ion-row justify-content-center>
+      <br><b><br>My location</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button ion-fab style="background-color: black" (click)="startListening()"><ion-icon [name]="speakstate"></ion-icon></button>  
+      <button ion-fab style="background-color: black" *ngIf="isIos()" (click)="stopListening()" full><ion-icon name="close"></ion-icon></button>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><br>Help</b><br>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Statistics</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding style="background-color: cornflowerblue;">
+ 
+        <ion-card>
+          <ion-card-header>
+            Distance travelled
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #lineCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+ <!-- <p>Statistics</p>-->
+ <ion-card>
+    <ion-card-header>
+      Heart rate in bpm
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+ <ion-card>
+      <ion-card-header>
+       Medicine status
+      </ion-card-header>
+    <ion-card-content>
+      <canvas #densityCanvas></canvas>
+    </ion-card-content>
+  </ion-card>       
+</ion-content>

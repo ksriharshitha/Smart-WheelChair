@@ -1,0 +1,17 @@
+page-home {
+  #map_canvas {
+    height: 70%;
+  }
+  
+  ion-card {
+    max-height: 200px;
+    overflow: scroll;
+    position: absolute;
+    z-index: 1;
+  }
+  .main-background{
+    background-color: cadetblue;
+    background-size: cover;
+  }
+}
+  
